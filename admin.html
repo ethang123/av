@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="3">Central Login</h1>
+
+    <p id="1">For: Ranking System</p>
+
+    <p id="2">Administration Login</p>
+
+    <form>
+      <input type="text" placeholder="Username" id="text1" /><br />
+      <br />
+      <input type="password" placeholder="Password" id="text2" /><br />
+      <br />
+      <input type="button" value="Login" onclick="javascript:validate()" />
+      <br />
+      <br />
+    </form>
+    <script type="text/javascript">
+      function validate() {
+        if (
+          document.getElementById("text1").value == "ADMIN" &&
+          document.getElementById("text2").value ==
+            localStorage.getItem("adminpass")
+        ) {
+          location.href = "admin2.html";
+          var aa = window.sessionStorage;
+          aa.setItem("username", "ADMIN USER");
+        } else {
+          alert("Username and password don't match");
+        }
+      }
+    </script>
+    <input
+      type="button"
+      style="display: none;"
+      value="Admin User"
+      onclick="admin()"
+    />
+    <script>
+      function admin() {
+        window.location = "admin.html";
+      }
+    </script>
+    <style>
+      button {
+        background-color: aqua;
+      }
+      button {
+        color: black;
+      }
+    </style>
+    <input type="button" id="21" value="Set Password" onclick="admin22()" />
+    <script>
+      function admin22() {
+        window.location = "adminpass.html";
+      }
+    </script>
+    <script>
+      function closeabout() {
+        var x = document.getElementById("1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("3");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("5");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("6");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        document.getElementById("demo").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

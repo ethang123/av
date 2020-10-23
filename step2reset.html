@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <form>
+    <input type="text" placeholder="Username" id="text2" /> <br />
+    <br />
+    <input type="text" placeholder="Password" id="text3" /> <br />
+    <br />
+    <input type="button" value="Submit" onclick="qs()" />
+  </form>
+  <script>
+    function qs() {
+      var pss = document.getElementById("text2").value;
+      var pass = localStorage.getItem(pss);
+      var us = document.getElementById("text3").value;
+      var usc = localStorage.getItem(us);
+      if (document.getElementById("text2").value == pass) {
+        if (us == usc) {
+          alert("Don't use the same password as before!");
+        } else {
+          localStorage.setItem();
+        }
+      } else {
+        alert(
+          "Username does not exist or a security question was not provided."
+        );
+      }
+    }
+  </script>
+
+  <script type="text/javascript">
+    function validate() {
+      var pss = document.getElementById("text2").value;
+      var pass = localStorage.getItem(pss);
+      var saa = pss + "q";
+      var sq = localStorage.getItem(saa);
+      var sqq = pss + "a";
+      var sqa = localStorage.getItem(sqq);
+      if (document.getElementById("text3").value == sqa) {
+        window.location = "welcome.html";
+        var ss = window.sessionStorage;
+        ss.setItem("username", pss);
+        alert("Redirecting...");
+      } else {
+        alert("");
+      }
+    }
+  </script>
+</html>

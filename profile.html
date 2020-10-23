@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var st = window.sessionStorage;
+      var ust = st.getItem("username");
+      var uste = ust + "type";
+      function profile() {
+        if (uste == "admin") {
+          document.getElementById("type").innerHTML = "Admin User";
+        } else {
+          document.getElementById("type").innerHTML = "Standard User";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Average Profile Hub</p>
+    <p>Logged in as:</p>
+  </body>
+</html>

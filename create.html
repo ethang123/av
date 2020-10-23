@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <p id="demo"></p>
+  <form>
+    <input type="text" placeholder="Username" id="text5" /><br />
+    <br />
+    <input type="password" placeholder="Password" id="text4" /><br />
+    <br />
+    <input type="text" placeholder="Security Question" id="text6" /> <br />
+    <br />
+    <input type="text" placeholder="Security Answer" id="text7" /> <br />
+    <br />
+    <input type="button" value="Create Account" onclick="admin22()" /> <br />
+    <br />
+  </form>
+  <script>
+    function admin22() {
+      var un = document.getElementById("text5").value;
+      var unc = localStorage.getItem(un);
+      if (un == unc) {
+        alert("Username already exists!");
+        return;
+      } else {
+        var pass = document.getElementById("text4").value;
+        var pc = localStorage.getItem(pc);
+        var sq = document.getElementById("text6").value;
+        var sqa = document.getElementById("text7").value;
+        var qqa = un + "q";
+        var qqq = un + "a";
+        var up = un + "p";
+        localStorage.setItem(qqa, sq);
+        localStorage.setItem(qqq, sqa);
+        var ga = localStorage.getItem(qqa, sq);
+        var se = localStorage.getItem(qqq, sqa);
+        alert("Seq. Question: " + ga + ", Seq. Answer: " + se);
+        localStorage.setItem(un, un);
+        localStorage.setItem(up, pass);
+        localStorage.setItem(un + "ty", "STANDARD");
+        window.location = "index.html";
+      }
+    }
+  </script>
+</html>

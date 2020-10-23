@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <form>
+    <input type="text" placeholder="Username" id="text1" /><br />
+    <br />
+    <label for="cars">TYPE:</label>
+
+    <select name="cars" id="cars">
+      <option value="owner">Owner</option>
+      <option value="admin">Admin</option>
+      <option value="Standard">Standard</option>
+      <option value="paid">Paid</option>
+    </select>
+    <input type="button" value="Set" onclick="set()" />
+    <br />
+    <br />
+  </form>
+  <script>
+    function set() {
+      var usb = document.getElementById("text1").value;
+      if (usb === localStorage.getItem(usb)) {
+        var ad = localStorage.getItem(usb) + "ty";
+        var ty = document.getElementById("cars").value;
+        localStorage.setItem(usb + "ty", ty);
+        alert("Selected item: " + ty);
+        window.location = "index.html";
+      } else {
+        alert("Doesn't exist!");
+      }
+    }
+  </script>
+</html>

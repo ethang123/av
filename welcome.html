@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="3">Home Page</h1>
+
+    <p id="1">Welcome to the home of the site.</p>
+
+    <div id="7"></div>
+    <script type="text/javascript">
+      function checkPswd() {
+        var confirmPassword = "admin";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+          window.location = "welcome.html";
+        } else {
+          alert("Passwords do not match.");
+        }
+      }
+    </script>
+    <button id="ee" style="display: block;" onclick="profile()">Profile</button>
+    <button id="ee2" style="display: none;" onclick="closeprofile()">
+      Close Profile
+    </button>
+
+    <button id="5" style="display: block;" onclick="back()">
+      <strong> Logout </strong>
+    </button>
+
+    <script>
+      function back() {
+        window.location = "settype.html";
+      }
+    </script>
+    <script>
+      function profile() {
+        // Check browser support
+        if (typeof Storage !== "undefined") {
+          var sess = window.sessionStorage;
+          document.getElementById("3").innerHTML = "";
+          document.getElementById("1").innerHTML =
+            "Account type: " +
+            localStorage.getItem(sess.getItem("username") + "ty");
+          document.getElementById("7").innerHTML =
+            "Username: " + sess.getItem("username");
+          var x2 = document.getElementById("ee");
+          if (x2.style.display === "none") {
+            x2.style.display = "block";
+          } else {
+            x2.style.display = "none";
+          }
+          var x3 = document.getElementById("ee2");
+          if (x3.style.display === "none") {
+            x3.style.display = "block";
+          } else {
+            x3.style.display = "none";
+          }
+        } else {
+          document.getElementById("7").innerHTML =
+            "Sorry, your browser does not support Web Storage...";
+        }
+      }
+    </script>
+    <p id="demo"></p>
+    <script>
+      function closeprofile() {
+        if (
+          document.getElementById("3").innerHTML == "" &&
+          document.getElementById("1").innerHTML == ""
+        ) {
+          document.getElementById("1").innerHTML =
+            "Welcome to the home of the site.";
+          document.getElementById("3").innerHTML = "Home Page";
+          document.getElementById("7").innerHTML = "";
+          var x2 = document.getElementById("ee");
+          if (x2.style.display === "none") {
+            x2.style.display = "block";
+          } else {
+            x2.style.display = "none";
+          }
+          var x3 = document.getElementById("ee2");
+          if (x3.style.display === "none") {
+            x3.style.display = "block";
+          } else {
+            x3.style.display = "none";
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function about() {
+        document.getElementById("demo").innerHTML = "Made by ya boi.";
+        var x2 = document.getElementById("6");
+        if (x2.style.display === "none") {
+          x2.style.display = "block";
+        } else {
+          x2.style.display = "none";
+        }
+        var x3 = document.getElementById("1");
+        if (x3.style.display === "none") {
+          x3.style.display = "block";
+        } else {
+          x3.style.display = "none";
+        }
+        var x = document.getElementById("3");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x5 = document.getElementById("2");
+        if (x5.style.display === "none") {
+          x5.style.display = "block";
+        } else {
+          x5.style.display = "none";
+        }
+        var x4 = document.getElementById("5");
+        if (x4.style.display === "none") {
+          x4.style.display = "block";
+        } else {
+          x4.style.display = "none";
+        }
+      }
+    </script>
+    <script>
+      function closeabout() {
+        var x = document.getElementById("1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("3");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("5");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("6");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        document.getElementById("demo").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

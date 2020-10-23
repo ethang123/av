@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <p id="demo"></p>
+  <form>
+    <input type="password" placeholder="Password" id="text4" /><br />
+    <br />
+    <input type="button" value="Set Password" onclick="admin22()" /> <br />
+    <br />
+  </form>
+  <script>
+    function admin22() {
+      var p = document.getElementById("text4").value;
+      localStorage.setItem("adminpass", p);
+      window.location = "admin.html";
+    }
+  </script>
+</html>

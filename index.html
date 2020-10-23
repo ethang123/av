@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <body style="background-color: powderblue;">
+    <link rel="stylesheet" href="styles.css" />
+
+    <h1 id="3">Central Login</h1>
+
+    <p id="1">For: Ranking System</p>
+
+    <p id="2">Normal User Login &#127765;</p>
+
+    <form>
+      <input
+        style="background-color: azure;"
+        type="text"
+        placeholder="Username"
+        id="text1"
+      /><br />
+      <br />
+      <input type="password" placeholder="Password" id="text2" /> <br />
+      <br />
+      <input type="button" value="Login" onclick="javascript:validate()" />
+      <input type="button" value="Reset Password" onclick="a()" />
+      <input type="button" value="Create Account" onclick="create()" />
+      <input type="button" value="Admin User" onclick="admin()" />
+      <input type="button" value="Check out more websites?" onclick="web()" />
+    </form>
+
+    <script type="text/javascript">
+      function validate() {
+        var pss = document.getElementById("text2").value;
+        var unn = document.getElementById("text1").value;
+        var un = localStorage.getItem(unn);
+        var aas = unn + "p";
+        var pass = localStorage.getItem(aas);
+        if (
+          document.getElementById("text1").value == un &&
+          document.getElementById("text2").value == pass
+        ) {
+          var aa = window.sessionStorage;
+          aa.setItem("username", unn);
+          location.href = "welcome.html";
+        } else {
+          alert("Username and password don't match");
+        }
+      }
+    </script>
+    <script>
+      function web() {
+        window.location.href = "https://averagebots.vercel.app";
+      }
+    </script>
+    <script>
+      function a() {
+        window.location = "forgotpass.html";
+      }
+    </script>
+    <script>
+      function create() {
+        window.location = "create.html";
+      }
+    </script>
+    <script>
+      function admin() {
+        window.location = "admin.html";
+      }
+    </script>
+    <style>
+      button {
+        background-color: aqua;
+      }
+      button {
+        color: black;
+      }
+    </style>
+
+    <p id="demo"></p>
+
+    <script>
+      function about() {
+        document.getElementById("demo").innerHTML = "Made by ya boi.";
+        var x2 = document.getElementById("6");
+        if (x2.style.display === "none") {
+          x2.style.display = "block";
+        } else {
+          x2.style.display = "none";
+        }
+        var x3 = document.getElementById("1");
+        if (x3.style.display === "none") {
+          x3.style.display = "block";
+        } else {
+          x3.style.display = "none";
+        }
+        var x = document.getElementById("3");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x5 = document.getElementById("2");
+        if (x5.style.display === "none") {
+          x5.style.display = "block";
+        } else {
+          x5.style.display = "none";
+        }
+        var x4 = document.getElementById("5");
+        if (x4.style.display === "none") {
+          x4.style.display = "block";
+        } else {
+          x4.style.display = "none";
+        }
+      }
+    </script>
+    <script>
+      function closeabout() {
+        var x = document.getElementById("1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("3");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("5");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        var x = document.getElementById("6");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+        document.getElementById("demo").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
